@@ -20,3 +20,8 @@ get("/square_root/results") do
   @results = @num ** 0.5
   erb(:square_root_results)
 end
+
+get("/payment/new") do
+  erb(:new_payment)
+end
+
