@@ -7,6 +7,10 @@ get("/") do
   erb(:new_square)
 end
 
+get("/square/new") do
+  erb(:new_square)
+end
+
 get("/square/results") do
   @num = params.fetch("num").to_f
   @results = @num ** 2
@@ -64,6 +68,6 @@ get("/random/results") do
   @num2 = params.fetch("Maximum").to_f
 
   @results = rand(@num1 .. @num2)
-  
+
   erb(:random_results)
 end
